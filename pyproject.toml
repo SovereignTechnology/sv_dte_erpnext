@@ -1,0 +1,20 @@
+[project]
+name = "sv_dte"
+version = "0.1.0"
+description = "El Salvador DTE (Documento Tributario Electronico) integration for ERPNext v16"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0-or-later" }
+
+dependencies = [
+    "frappe",
+    "pyjwt>=2.0",
+    "cryptography>=41.0",
+]
+
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core:buildapi"
+
+[tool.bench]
+app-name = "sv_dte"

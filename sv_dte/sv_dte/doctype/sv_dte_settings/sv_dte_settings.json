@@ -1,0 +1,281 @@
+{
+	"actions": [],
+	"creation": "2026-03-28 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"environment_section",
+		"ambiente",
+		"column_break_env",
+		"firmador_url",
+		"auth_section",
+		"nit",
+		"api_password",
+		"column_break_auth",
+		"nrc",
+		"certificate_password",
+		"emisor_section",
+		"nombre_emisor",
+		"nombre_comercial",
+		"column_break_emisor",
+		"cod_actividad",
+		"desc_actividad",
+		"establecimiento_section",
+		"tipo_establecimiento",
+		"cod_estable_mh",
+		"cod_estable",
+		"column_break_estable",
+		"cod_punto_venta_mh",
+		"cod_punto_venta",
+		"direccion_section",
+		"departamento",
+		"municipio",
+		"column_break_dir",
+		"complemento_direccion",
+		"contacto_section",
+		"telefono",
+		"column_break_contacto",
+		"correo",
+		"token_section",
+		"jwt_token",
+		"column_break_token",
+		"token_expiry"
+	],
+	"fields": [
+		{
+			"fieldname": "environment_section",
+			"fieldtype": "Section Break",
+			"label": "Environment"
+		},
+		{
+			"default": "00",
+			"fieldname": "ambiente",
+			"fieldtype": "Select",
+			"label": "Ambiente",
+			"options": "00\n01",
+			"reqd": 1,
+			"description": "00 = Testing, 01 = Production"
+		},
+		{
+			"fieldname": "column_break_env",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "http://localhost:8113/firmardocumento/",
+			"fieldname": "firmador_url",
+			"fieldtype": "Data",
+			"label": "Firmador URL",
+			"reqd": 1
+		},
+		{
+			"fieldname": "auth_section",
+			"fieldtype": "Section Break",
+			"label": "MH Authentication"
+		},
+		{
+			"fieldname": "nit",
+			"fieldtype": "Data",
+			"label": "NIT",
+			"reqd": 1,
+			"description": "14-digit NIT without hyphens"
+		},
+		{
+			"fieldname": "api_password",
+			"fieldtype": "Password",
+			"label": "API Password",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_auth",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "nrc",
+			"fieldtype": "Data",
+			"label": "NRC",
+			"reqd": 1,
+			"description": "With hyphen, e.g. 1234-5"
+		},
+		{
+			"fieldname": "certificate_password",
+			"fieldtype": "Password",
+			"label": "Certificate Password",
+			"reqd": 1,
+			"description": "Private key password for the firmador"
+		},
+		{
+			"fieldname": "emisor_section",
+			"fieldtype": "Section Break",
+			"label": "Emisor (Issuer)"
+		},
+		{
+			"fieldname": "nombre_emisor",
+			"fieldtype": "Data",
+			"label": "Nombre Emisor",
+			"reqd": 1
+		},
+		{
+			"fieldname": "nombre_comercial",
+			"fieldtype": "Data",
+			"label": "Nombre Comercial"
+		},
+		{
+			"fieldname": "column_break_emisor",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "cod_actividad",
+			"fieldtype": "Data",
+			"label": "Codigo Actividad Economica",
+			"reqd": 1,
+			"description": "CIIU code, e.g. 46100"
+		},
+		{
+			"fieldname": "desc_actividad",
+			"fieldtype": "Data",
+			"label": "Descripcion Actividad",
+			"reqd": 1
+		},
+		{
+			"fieldname": "establecimiento_section",
+			"fieldtype": "Section Break",
+			"label": "Establecimiento"
+		},
+		{
+			"default": "01",
+			"fieldname": "tipo_establecimiento",
+			"fieldtype": "Select",
+			"label": "Tipo Establecimiento",
+			"options": "01\n02\n04\n07\n20",
+			"description": "01=Casa Matriz, 02=Sucursal, 04=Bodega, 07=Otro, 20=Predio"
+		},
+		{
+			"default": "0000",
+			"fieldname": "cod_estable_mh",
+			"fieldtype": "Data",
+			"label": "Cod Establecimiento MH"
+		},
+		{
+			"default": "0000",
+			"fieldname": "cod_estable",
+			"fieldtype": "Data",
+			"label": "Cod Establecimiento"
+		},
+		{
+			"fieldname": "column_break_estable",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0000",
+			"fieldname": "cod_punto_venta_mh",
+			"fieldtype": "Data",
+			"label": "Cod Punto Venta MH"
+		},
+		{
+			"default": "0000",
+			"fieldname": "cod_punto_venta",
+			"fieldtype": "Data",
+			"label": "Cod Punto Venta"
+		},
+		{
+			"fieldname": "direccion_section",
+			"fieldtype": "Section Break",
+			"label": "Direccion Emisor"
+		},
+		{
+			"fieldname": "departamento",
+			"fieldtype": "Data",
+			"label": "Departamento",
+			"reqd": 1,
+			"description": "Department code, e.g. 06 = San Salvador"
+		},
+		{
+			"fieldname": "municipio",
+			"fieldtype": "Data",
+			"label": "Municipio",
+			"reqd": 1,
+			"description": "Municipality code"
+		},
+		{
+			"fieldname": "column_break_dir",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "complemento_direccion",
+			"fieldtype": "Small Text",
+			"label": "Complemento Direccion",
+			"reqd": 1
+		},
+		{
+			"fieldname": "contacto_section",
+			"fieldtype": "Section Break",
+			"label": "Contacto"
+		},
+		{
+			"fieldname": "telefono",
+			"fieldtype": "Data",
+			"label": "Telefono"
+		},
+		{
+			"fieldname": "column_break_contacto",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "correo",
+			"fieldtype": "Data",
+			"label": "Correo Electronico",
+			"options": "Email",
+			"reqd": 1
+		},
+		{
+			"fieldname": "token_section",
+			"fieldtype": "Section Break",
+			"label": "JWT Token (auto-managed)",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "jwt_token",
+			"fieldtype": "Small Text",
+			"label": "JWT Token",
+			"read_only": 1,
+			"hidden": 1
+		},
+		{
+			"fieldname": "column_break_token",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "token_expiry",
+			"fieldtype": "Datetime",
+			"label": "Token Expiry",
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"issingle": 1,
+	"links": [],
+	"modified": "2026-03-28 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "SV DTE",
+	"name": "SV DTE Settings",
+	"naming_rule": "Expression",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

@@ -1,0 +1,121 @@
+{
+	"actions": [],
+	"autoname": "autoincrement",
+	"creation": "2026-03-28 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"dte_document",
+		"endpoint",
+		"method",
+		"column_break_main",
+		"http_status",
+		"status",
+		"timestamp",
+		"section_request",
+		"request_headers",
+		"request_body",
+		"section_response",
+		"response_body",
+		"error_message"
+	],
+	"fields": [
+		{
+			"fieldname": "dte_document",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "DTE Document",
+			"options": "DTE Document"
+		},
+		{
+			"fieldname": "endpoint",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Endpoint"
+		},
+		{
+			"fieldname": "method",
+			"fieldtype": "Select",
+			"label": "HTTP Method",
+			"options": "POST\nGET"
+		},
+		{
+			"fieldname": "column_break_main",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "http_status",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "HTTP Status"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Success\nError"
+		},
+		{
+			"fieldname": "timestamp",
+			"fieldtype": "Datetime",
+			"label": "Timestamp",
+			"default": "Now"
+		},
+		{
+			"fieldname": "section_request",
+			"fieldtype": "Section Break",
+			"label": "Request",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "request_headers",
+			"fieldtype": "Code",
+			"label": "Request Headers",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "request_body",
+			"fieldtype": "Code",
+			"label": "Request Body",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "section_response",
+			"fieldtype": "Section Break",
+			"label": "Response",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "response_body",
+			"fieldtype": "Code",
+			"label": "Response Body",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "error_message",
+			"fieldtype": "Small Text",
+			"label": "Error Message"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-28 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "SV DTE",
+	"name": "DTE API Log",
+	"naming_rule": "Autoincrement",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"export": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 0
+}

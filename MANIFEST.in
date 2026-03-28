@@ -1,0 +1,5 @@
+include MANIFEST.in
+include requirements.txt
+include license.txt
+recursive-include sv_dte *.py *.json *.js *.css *.html *.md *.txt
+recursive-exclude sv_dte *.pyc

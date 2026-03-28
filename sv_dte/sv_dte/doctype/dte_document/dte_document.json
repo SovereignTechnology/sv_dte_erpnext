@@ -1,0 +1,294 @@
+{
+	"actions": [],
+	"autoname": "field:codigo_generacion",
+	"creation": "2026-03-28 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tipo_dte",
+		"status",
+		"column_break_main",
+		"sales_invoice",
+		"company",
+		"section_identificacion",
+		"codigo_generacion",
+		"numero_control",
+		"column_break_ident",
+		"ambiente",
+		"fec_emi",
+		"hor_emi",
+		"section_receptor",
+		"receptor_nit",
+		"receptor_nrc",
+		"column_break_receptor",
+		"receptor_nombre",
+		"receptor_correo",
+		"section_totals",
+		"total_gravada",
+		"total_iva",
+		"column_break_totals",
+		"monto_total_operacion",
+		"condicion_operacion",
+		"section_mh",
+		"sello_recibido",
+		"fecha_procesamiento",
+		"column_break_mh",
+		"codigo_msg",
+		"descripcion_msg",
+		"section_payload",
+		"dte_json",
+		"signed_payload",
+		"section_response",
+		"mh_response_json"
+	],
+	"fields": [
+		{
+			"fieldname": "tipo_dte",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Tipo DTE",
+			"options": "01 - Factura\n03 - Credito Fiscal\n05 - Nota de Credito\n06 - Nota de Debito\n07 - Nota de Remision\n11 - Comprobante de Retencion\n14 - Comprobante de Liquidacion\n15 - Doc Contable de Liquidacion\n43 - Factura de Exportacion\n44 - Factura Sujeto Excluido\n46 - Comprobante de Donacion",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Status",
+			"options": "Draft\nSigned\nTransmitted\nAccepted\nRejected\nInvalidated\nError",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_main",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "sales_invoice",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Sales Invoice",
+			"options": "Sales Invoice"
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company"
+		},
+		{
+			"fieldname": "section_identificacion",
+			"fieldtype": "Section Break",
+			"label": "Identificacion"
+		},
+		{
+			"fieldname": "codigo_generacion",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Codigo Generacion",
+			"read_only": 1,
+			"unique": 1,
+			"description": "UUID v4 auto-generated"
+		},
+		{
+			"fieldname": "numero_control",
+			"fieldtype": "Data",
+			"label": "Numero de Control",
+			"read_only": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "column_break_ident",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "ambiente",
+			"fieldtype": "Data",
+			"label": "Ambiente",
+			"read_only": 1
+		},
+		{
+			"fieldname": "fec_emi",
+			"fieldtype": "Date",
+			"label": "Fecha Emision",
+			"read_only": 1
+		},
+		{
+			"fieldname": "hor_emi",
+			"fieldtype": "Time",
+			"label": "Hora Emision",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_receptor",
+			"fieldtype": "Section Break",
+			"label": "Receptor"
+		},
+		{
+			"fieldname": "receptor_nit",
+			"fieldtype": "Data",
+			"label": "Receptor NIT"
+		},
+		{
+			"fieldname": "receptor_nrc",
+			"fieldtype": "Data",
+			"label": "Receptor NRC"
+		},
+		{
+			"fieldname": "column_break_receptor",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "receptor_nombre",
+			"fieldtype": "Data",
+			"label": "Receptor Nombre"
+		},
+		{
+			"fieldname": "receptor_correo",
+			"fieldtype": "Data",
+			"label": "Receptor Correo",
+			"options": "Email"
+		},
+		{
+			"fieldname": "section_totals",
+			"fieldtype": "Section Break",
+			"label": "Totals"
+		},
+		{
+			"fieldname": "total_gravada",
+			"fieldtype": "Currency",
+			"label": "Total Gravada",
+			"read_only": 1
+		},
+		{
+			"fieldname": "total_iva",
+			"fieldtype": "Currency",
+			"label": "Total IVA",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_totals",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "monto_total_operacion",
+			"fieldtype": "Currency",
+			"label": "Monto Total Operacion",
+			"read_only": 1
+		},
+		{
+			"default": "1",
+			"fieldname": "condicion_operacion",
+			"fieldtype": "Select",
+			"label": "Condicion Operacion",
+			"options": "1\n2\n3",
+			"description": "1=Contado, 2=Credito, 3=Otro"
+		},
+		{
+			"fieldname": "section_mh",
+			"fieldtype": "Section Break",
+			"label": "MH Response"
+		},
+		{
+			"fieldname": "sello_recibido",
+			"fieldtype": "Small Text",
+			"label": "Sello Recibido",
+			"read_only": 1
+		},
+		{
+			"fieldname": "fecha_procesamiento",
+			"fieldtype": "Datetime",
+			"label": "Fecha Procesamiento",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_mh",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "codigo_msg",
+			"fieldtype": "Data",
+			"label": "Codigo Mensaje",
+			"read_only": 1
+		},
+		{
+			"fieldname": "descripcion_msg",
+			"fieldtype": "Data",
+			"label": "Descripcion Mensaje",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_payload",
+			"fieldtype": "Section Break",
+			"label": "DTE Payload",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "dte_json",
+			"fieldtype": "Code",
+			"label": "DTE JSON",
+			"options": "JSON",
+			"read_only": 1
+		},
+		{
+			"fieldname": "signed_payload",
+			"fieldtype": "Long Text",
+			"label": "Signed Payload (JWS)",
+			"read_only": 1,
+			"hidden": 1
+		},
+		{
+			"fieldname": "section_response",
+			"fieldtype": "Section Break",
+			"label": "MH Response JSON",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "mh_response_json",
+			"fieldtype": "Code",
+			"label": "MH Response",
+			"options": "JSON",
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-28 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "SV DTE",
+	"name": "DTE Document",
+	"naming_rule": "By fieldname",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Accounts Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "numero_control",
+	"track_changes": 1
+}
