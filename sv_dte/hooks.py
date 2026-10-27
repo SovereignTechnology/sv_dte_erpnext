@@ -1,8 +1,8 @@
 app_name = "sv_dte"
 app_title = "SV DTE"
-app_publisher = "sovIT"
+app_publisher = "Sovereign Technology"
 app_description = "El Salvador DTE (Documento Tributario Electronico) integration for ERPNext"
-app_email = "git@sovit.xyz"
+app_email = "services@sovtech.pro"
 app_license = "AGPL-3.0-or-later"
 
 required_apps = ["frappe", "erpnext"]

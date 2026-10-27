@@ -79,7 +79,7 @@ Place your certificate at `certificados/<NIT>.crt` in the firmador's working dir
 # From your bench directory
 bench get-app /path/to/sv_dte_erpnext
 # Or directly from GitHub
-bench get-app https://github.com/sovITxyz/sv_dte_erpnext.git
+bench get-app https://github.com/SovereignTechnology/sv_dte_erpnext.git
 
 bench --site <your-site> install-app sv_dte
 
